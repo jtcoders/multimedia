@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exercise 2: Audio and Video Formats</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Exercise 2: Audio and Video Formats</h1>
+
+      <ul>
+        <li>Download <a href="media/springs.mov">this file</a> or find a .mov on your file system (like from your digital camera).
+        <li>Use <a href="http://www.mirovideoconverter.com/" target="_blank">Miro Video Converter</a> to encode the file into enough formats so that your
+          site will work on Firefox, Chrome, and Safari.
+        <li>Download the encoded files into your project folder.
+        <li>Create an <code>audio</code> tag to embed the audio, using multiple <code>source</code>
+          tags to specify each file format. Make sure it plays on each browser.
+        <li>Download an uncompressed video file (avi, flv, etc)
+        <li>Use <a href="http://online-audio-converter.com/" target="_blank">Online Audio Converter</a> to encode the file into enough formats so that your
+          site to work on Firefox, Chrome, and Safari.
+        <li>Download the encoded files into your project folder.
+        <li>Create a <code>video</code> tag to embed the audio, using multiple <code>source</code>
+          tags to specify each file format. Make sure it plays on each browser.
+        <li><strong>Bonus:</strong>Download <a href="https://www.jwplayer.com/" target="_blank">JWPlayer</a> and put the player.swf in your project folder. Add a flash fallback to your video tag. Specify the src URL like "player.swf?videoUrl=sayHello.mp3&amp;autoPlay=true"
+        <li><strong>Bonus:</strong>Try recording a video on your smartphone and figuring out how to get that encoded and on your webpage.
+      </ul>
+        
+  <script>
+        function showSolution(num) {
+          if (confirm('You surrrrre?')) {
+            document.getElementById('solution' + num).style.display = 'block';
+          }
+        }
+  </script>
+  </body>
+</html>

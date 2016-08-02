@@ -1,0 +1,556 @@
+<!doctype html>
+  <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Multimedia in HTML5</title>
+        
+        <link rel="stylesheet" href="css/reveal.css">
+    		<link rel="stylesheet" href="css/theme/gdilight.css" id="theme">
+
+    		<!-- For syntax highlighting -->
+    		<!-- light editor --><link rel="stylesheet" href="lib/css/light.css">
+    		 <!-- dark editor<link rel="stylesheet" href="lib/css/dark.css"> -->
+
+    		<!-- If use the PDF print sheet so students can print slides-->
+
+    		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+    		<!--[if lt IE 9]>
+    		<script src="lib/js/html5shiv.js"></script>
+    		<![endif]-->
+        </script>
+    </head>
+<body>
+  
+  <div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+
+    <section> 
+     <h2>Multimedia in HTML5</h2>
+     <br>
+       <p>
+         Slides: <a href="https://jtcoders.github.io/multimedia">https://jtcoders.github.io/multimedia</a>
+       </p>
+    </section> 
+      
+    <section>
+      <h2>Prehistoric HTML</h2>
+        <p>Before HTML5, browsers could 
+          only natively display one type of 
+          multimedia.
+        </p>
+        <br>
+        <pre><code>
+&lt;img src="omgcat.gif"&gt;
+        </code></pre>
+        <br>
+        <img src="media/omgcat.gif">
+      </section>
+
+    <section>
+      <h2>The plugin era</h2>
+        <p>Plugins proliferated:
+        <ul>
+          <li>1991: Apple Quicktime (.mov)
+          <li>1994: MIDI (background music)
+          <li>1995: RealAudio (.ra, .ram)
+          <li>1997: RealVideo (H.263)
+          <li>1998: Windows Media Player
+          <li>1999: Quicktime for Windows (.mov, .mp3, .mp4, .swf)
+          <li>2002: Macromedia Shockwave Flash (.swf)
+          <li>2007: Microsoft Silverlight (flash, vid, etc.)
+        </ul>
+    </section>
+
+    <section>
+      <h2>HTML support for plugins</h2>
+        <p>To embed a file for a plugin to open, you'd use:
+        </p>
+        <br>
+        <code>&lt;embed&gt;</code>
+        <p>Introduced in Netscape 2.0, a simple tag.</p>
+        <br>
+        <code>&lt;object&gt;</code>
+        <p>Introduced in HTML 4.01 spec, this tag supports more complex configuration.
+        </p>
+    </section>
+
+   <section> 
+     <h2>The embed element</h2>
+    
+<p>The <code>embed</code> tag should specify <code>src</code> and <code>type</code> attributes.
+</p>
+<pre><code>&lt;embed type="application/x-shockwave-flash"
+ src="zombie_walk.swf"/&gt;</code></pre>
+<br><br>
+<embed type="application/x-shockwave-flash" src="media/zombie_walk.swf"/>
+   </section>
+
+    <section> 
+     <h2>The object element</h2>
+<p>The <code>object</code> tag should have one or more <code>param</code> child tags that give info to the browser on what to embed.
+</p>
+<pre><code>&lt;object width="300" height="150"&gt;
+  &lt;param name="movie" value="zombie_walk.swf"/&gt;
+  &lt;param name="bgcolor" value="white"/&gt;
+&lt;/object&gt;</code></pre>
+<br><br>
+<object width="300" height="150">
+  <param name="movie" value="media/zombie_walk.swf"/>
+</object>
+   </section>
+        
+    <section> 
+     <h2>Embed Codes</h2>
+     <p>The (old) Youtube embed code includes an <code>object</code> and an <code>embed</code> tag.
+</p>
+
+<pre><code>&lt;<strong>object</strong> width="480" height="385"&gt;
+  &lt;param name="movie"
+     value="http://www.youtube.com/v/ddm5bbeqHVA"/&gt;
+  &lt;param name="allowFullScreen"
+     value="true"/&gt;
+  &lt;param name="allowscriptaccess"
+     value="always"/&gt;
+
+  &lt;<strong>embed</strong> src="http://www.youtube.com/v/ddm5bbeqHVA"
+         type="application/x-shockwave-flash"
+         allowscriptaccess="always" 
+         allowfullscreen="true" width="480" height="385"/&gt;
+
+&lt;/object&gt;</code></pre>
+
+   </section>
+    
+    <section> 
+     <h2>Embeds: Youtube (Example)</h2>
+     <p>The code from the previous slide produces:</p>
+<br>
+<object width="480" height="385">
+  <param name="movie" value="http://www.youtube.com/v/ddm5bbeqHVA?fs=1&amp;hl=en_US"/>
+  <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"/>
+
+  <embed src="http://www.youtube.com/v/ddm5bbeqHVA?fs=1&amp;hl=en_US"
+         type="application/x-shockwave-flash" allowscriptaccess="always" 
+         allowfullscreen="true" width="480" height="385">
+  </embed>
+
+</object>
+   </section>
+    
+    <section>
+     <h2>The problem with plugins</h2>
+        <ul>
+          <li>Bad user experience (pop-ups)
+          <li>Didn't play nice with eachother (crash!)
+          <li>Opened up security holes (malware)
+          <li>Didn't work everywhere (Flash on iPads)
+        </ul>
+    </section>
+    
+    
+    
+    <section> 
+    <h2>The dawn of native multimedia</h2>
+      <p>In HTML5, you can embed audio or video using native HTML tags <code>audio</code> and <code>video</code>, and if the browser supports the tags, it will give users controls to play the file.
+      </p>
+    </section>
+    
+    <section> 
+      <h2>Why is native better?</h2>
+      <ul>
+          <li><strong>No plugins needed</strong>
+          <li>Better performance
+          <li>Native, accessible controls
+      </ul>
+    </section>
+   
+    <section> 
+    <h2>The audio element</h2>
+     <p>The <code>audio</code> element is used for embedding an audio player inside a page for a particular audio file. 
+</p>
+
+<p>You can use various attributes to customize the player: <code>preload</code>, <code>autoplay</code>, <code>loop</code>, and <code>controls</code>.</p>
+
+<pre><code>&lt;audio src="argentina.ogg"
+  controls="true" preload="true"&gt;&lt;/audio&gt;</code></pre>
+
+<audio src="media/argentina.ogg" controls="true" autobuffer="true"></audio>
+<p>See also: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">Audio element reference</a></p>
+   </section>
+    
+    <section> 
+     <h2>The video element</h2>
+     <p>The <code>video</code> element embeds a video player for a particular video file.
+</p>
+<p>You can use these attributes to customize the player: <code>poster</code>, <code>preload</code>, <code>autoplay</code>, <code>loop</code>, and <code>controls</code>.
+
+<pre><code>&lt;video src="chrome_japan.ogv" controls width="390"&gt;&lt;/video&gt;</code></pre>
+<video src="media/chrome_japan.ogv" controls width="390"></video>
+<p>See also: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">Video element reference</a></p>
+   </section>
+
+    <section>
+      <h2><a href="exercise_tags.html" target="_blank">Exercise Time!</a></h2>
+    </section>
+
+    <section>
+      <h2>Codecs &amp; Containers</h2>
+    </section>
+
+    <section> 
+     <h2>Audio codecs</h2>
+       <p>An audio track is compressed, stored, and decoded according to a codec. Most audio codecs support two channels of sound, some support more.
+      </p>
+      <p>The most relevant audio codecs are:
+        <ul>
+         <li><strong>MP3</strong>: <span style="color:red">Patent-encumbered</span>.
+         <li><strong>AAC (Advanced Audio Coding)</strong>: <span style="color:red">Patent-encumbered</span>. Used in Apple products.
+         <li><strong>Ogg Vorbis</strong>: Free, open-source, patent-free
+       </ul>
+      </p>
+   </section>
+    
+    <section> 
+     <h2>Browser support</h2>
+      <p>There is no official codec for browsers to support, so they vary:</p>
+       <p>
+        <img src="media/audio_codec_support.png" style="max-height:45vh;">
+       <p>
+      <p>
+       <a href="http://en.wikipedia.org/wiki/HTML5_Audio" target="_blank">HTML5 Audio Support</a>
+      </p>
+     </p>
+   </section>
+
+    <section> 
+     <h2>Video container formats</h2>
+     <p>A video file, like an ".avi" file, is really a container for multiple related files that describe a video, like:
+<ul>
+  <li>a video track
+  <li>one or more audio tracks with synchronization markers
+  <li>metadata (title, album art, etc).
+</ul>
+</p>
+<p>The most popular video containers are:
+  <ul> 
+   <li><strong>MPEG4</strong>: .mp4, .m4v
+   <li><strong>Ogg</strong>: .ogv
+   <li><strong>WebM</strong>: .webm
+ </ul>
+     </section>
+
+    <section> 
+     <h2>Video codecs</h2>
+     <p>A video track is compressed and stored in a particular way, and a "codec" describes how to turn the stored data into the series of images that you see.
+</p>
+<p>The most relevant video codecs are:
+  <ul> 
+   <li><strong>H.264</strong>: <span style="color:red">Patent-encumbered</span>.
+   <li><strong>Theora</strong>: Royalty-free.
+   <li><strong>VP8</strong>: Patented but licensed royalty-free.
+ </ul>
+</p>
+
+     </section>
+  
+    <section> 
+     <h2>Browser support</h2>
+     <p>Each  browser supports a different combo of formats and codecs, due to patents issues. This is the current situation:</p>
+      <img src="http://dl.dropbox.com/u/10998095/Screenshots/oef-q9v7pd2t.png" style="max-height:400px;">
+      <p><a href="http://en.wikipedia.org/wiki/HTML5_video" target="_blank">HTML5 Video Support</a>
+      </p>
+      <!--The Theora/Ogg and WebM formats are both open-source and patent-free, so they are the best to use if you don't want to worry about licensing.
+      -->
+     </section>    
+    
+    <section> 
+     <h2>Multimedia Encoders</h2>
+     <p>There are now many online services, desktop apps,
+      and command-line libraries for encoding, like:
+     </p>
+
+     <ul>
+      <li><a href="http://mirovideoconverter.com" target="_blank">Miro Video Converter</a> (app)
+      <li><a href="http://www.onlinevideoconverter.com" target="_blank">Online Video Converter</a>(online)
+      <li><a href="http://firefogg.org/" target="_blank">FireFogg</a> (Firefox plugin)
+      <li><a href="http://handbrake.fr/" target="_blank">HandBrake</a> (open-source, cross-platform)
+      <li>Command-line
+     </ul>
+     </section>
+
+    <section> 
+     <h2>Multiple media sources</h2>
+     <p>As we saw, different browsers support different formats. Thankfully, HTML5 lets us specify multiple sources for the <code>video</code> and <code>audio</code> elements, so browsers can use whichever works for them.
+</p>
+<pre><code>&lt;video height="200" controls=""&gt;
+  &lt;source src="media/chrome_japan.webm" type="video/webm"/&gt;
+  &lt;source src="media/chrome_japan.mp4" type="video/mp4"/&gt;
+  &lt;source src="media/chrome_japan.ogv" type="video/ogg"/&gt;
+&lt;/video&gt;</code></pre>
+<video height="200" controls="">
+  <source src="media/chrome_japan.webm" type="video/webm">
+  <source src="media/chrome_japan.mp4" type="video/mp4">
+  <source src="media/chrome_japan.ogv" type="video/ogg">
+</video>
+     </section>
+  
+    <section> 
+     <h2>Fallback options</h2>
+     <p>There are some browsers that don't support these new elements. In that case, you can provide a fallback option via a browser plug-in, like Java or Flash, and put the fallback inside the element. For example, here's a Flash fallback:
+</p>
+
+<pre><code>&lt;video src="video.ogv" controls&gt;  
+    &lt;object data="flvplayer.swf" type="application/x-shockwave-flash"&gt;  
+      &lt;param value="flvplayer.swf" name="movie"/&gt;  
+    &lt;/object&gt;  
+&lt;/video&gt;</code></pre>
+     </section>
+
+    <section>
+      <h2><a href="exercise_formats.html" target="_blank">Exercise Time!</a></h2>
+    </section>
+
+    <section>
+      <h2>Accessibility</h2>
+    </section>
+
+    <section> 
+     <h2>Tracks</h2>
+
+<p>The <code>track</code> tag can be used to specify subtitles, captions, chapters,
+ descriptions, and metadata:</p>
+ <br>
+<pre><code>&lt;video src="video-file.mp4"  controls&gt;
+  &lt;track src="en.vtt" kind="subtitles" srclang="en" label="English subtitles" default&gt;
+  &lt;track src="de.vtt" kind="subtitles" srclang="de" label="German subtitles"&gt;
+  &lt;track src="ch-en.vtt" kind="chapters" srclang="en" label="English chapter listing" default&gt;
+&lt;/video&gt;</code></pre>
+<br>
+<p>
+    <a href="http://tecfa.unige.ch/guides/html/html5-video/html5-video-track.html" target="_blank">Video Track</a>
+    &middot;
+    <a href="http://www.html5rocks.com/en/tutorials/track/basics/" target="_blank">HTML5 Rocks Demo</a>
+    &middot;
+    <a href="http://www.annodex.net/~silvia/itext/elephant_no_skin.html#itmenu" target="_blank">Elephants Dream</a>
+</p>
+    <!-- http://dl.dropbox.com/u/10998095/Screenshots/fn~y33syqgw~.png -->
+     </section>
+
+    <section> 
+     <h2>Track files</h2>
+
+      <p>The WebVTT or SRT file format describes timed information.</p>
+      <p>Tags and annotations can be used to specify class names, timestamps, positioning:</p>
+
+      <pre><code class="text">1
+00:00:10.500 --> 00:00:13.000 A:start
+Elephants Dream
+
+2
+00:00:15.000 --> 00:00:18.000 A:end L:10%
+And thus it &lt;b&gt;begins&lt;/b&gt;... </code></pre>
+      </section>
+
+
+    <!-- tools for making subtitles? Amara? -->
+    <section> 
+     <h2>Captioning/Translation Tools</h2>
+
+      <ul>
+        <li><a href="http://ie.microsoft.com/testdrive/Graphics/CaptionMaker/ target="_blank"">CaptionMaker</a></li>
+        <li><a href="http://www.amara.org/en/" target="_blank">Amara</a></li>
+        <li><a href="http://www.overstream.net/" target="_blank">Overstream</a></li>
+        <li><a href="http://www.subtitle-horse.com/" target="_blank">Subtitle Horse</a></li>
+        <li><a href="http://dotsub.com/" target="_blank">DotSub</a></li>
+        <li><A href="http://www.urusoft.net/products.php?cat=sw&lang=1" target="_blank">Subtitle Workshop</a></li>
+      </ul>
+
+     </section>
+    
+    <!-- JS APIs -->
+    <section>
+      <h2>JavaScript APIs</h2>
+    </section>
+
+    <section> 
+     <h2>API Attributes</h2>
+
+      <p>Many of these attributes can be set via JS, and trigger events on change:
+      </p>
+      <ul style="column-count:3;-webkit-column-count:3;-moz-column-count:3;overflow:hidden;">
+        <li>duration</li>
+        <li>autoplay</li>
+        <li>loop</li>
+        <li>controls</li>
+        <li>muted</li>
+        <li>src</li>
+        <li>currentSrc</li>
+        <li>networkState</li>
+        <li>preload</li>
+        <li>buffered</li>
+        <li>readyState</li>
+        <li>volume</li>
+        <li>playbackRate</li>
+        <li>paused</li>
+        <li>ended</li>
+        <li>width</li>
+        <li>height</li>
+        <li>poster</li>
+      </ul>
+      <pre><code>var video = document.getElementsByTagName("video")[0];
+alert(video.currentTime);
+video.playbackRate = video.playbackRate * 2;</code></pre>
+      <p>
+        <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/video#Attributes" target="_blank">MDN Video Attributes reference</a>
+      </p>
+     </section>
+
+    <section> 
+     <h2>API Events</h2>
+
+      <ul style="column-count:3;-webkit-column-count:3;-moz-column-count:3;overflow:hidden;">
+        <li>loadstart</li>
+        <li>progress</li>
+        <li>suspend</li>
+        <li>abort</li>
+        <li>error</li>
+        <li>emptied</li>
+        <li>stalled</li>
+        <li>loadedmetadata</li>
+        <li>loadeddata</li>
+        <li>canplay</li>
+        <li>canplaythrough</li>
+        <li>playing</li>
+        <li>waiting</li>
+        <li>seeking</li>
+        <li>seeked</li>
+        <li>ended</li>
+        <li>durationchange</li>
+        <li>timeupdate</li>
+        <li>play</li>
+        <li>pause</li>
+        <li>ratechange</li>
+        <li>volumechange</li>
+      </ul>
+      <pre><code>&lt;div id="time"&gt;0&lt;/div&gt;
+&lt;script&gt;
+var video = document.getElementsByTagName("video")[0];
+video.addEventListener('timechange', function() {
+  document.getElementById("time").innerHTML = video.currentTime;
+}, false);
+&lt;/script&gt;</code></pre>
+
+      <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-definitions" target="_blank">W3C Video Events Spec</a>
+      </section>
+
+    <section> 
+     <h2>API Functions</h2>
+
+      <ul style="column-count:3; overflow:hidden;">
+        <li>load()</li>
+        <li>play()</li>
+        <li>pause()</li>
+        <li>canPlayType()</li>
+        <li>addTextTrack()</li>
+      </ul>
+
+      <pre><code>&lt;button id="play" title="play" onclick="playVideo()"&gt;play&lt;/button&gt;
+&lt;script&gt;
+function playVideo() {
+  var video = document.getElementsByTagName("video")[0];
+  video.play();
+}
+&lt;/script&gt;</code></pre>
+
+      </section>
+
+    <section> 
+     <h2>API Example</h2>
+      <p><a href="http://www.w3.org/2010/05/video/mediaevents.html" target="_blank">This example does everything!</a></p>
+
+      </section>
+
+    <section>
+      <h2><a href="exercise_apis.html" target="_blank">Exercise Time!</a></h2>
+    </section>
+
+    <section> 
+     <h2>JavaScript Libraries</h2>
+
+      <ul>
+        <li><a href="https://github.com/zencoder/video-js" target="_blank">video.js</a></li>
+        <li><a href="http://mediaelementjs.com/" target="_blank">MediaElementJS</a></li>
+        <li><a href="https://www.jwplayer.com/" target="_blank">JWPlayer</a></li>
+        <li><a href="http://leanbackplayer.com/" target="_blank">LeanBack</a></li>
+        <li><a href="http://www.storiesinflight.com/js_videosub/" target="_blank">js_videosub</a></li>
+        <li><a href="http://popcornjs.org/" target="_blank">PopcornJS</a></li>
+        <li><a href="https://github.com/cgiffard/Captionator" target="_blank">Captionator</a></li>
+      </ul>
+      </section>
+
+    <section> 
+     <h2>Hosted Conversion and Transcoding Services</h2>
+
+      <ul>
+        <li><a href="http://www.heywatch.com/" target="_blank">HeyWatch</a></li>
+        <li><a href="http://www.transloadit.com/" target="_blank">Transloadit</a></li>
+        <li><a href="http://zencoder.com/en/" target="_blank">ZenCoder</a></li>
+        <li><a href="http://www.encoding.com/" target="_blank">encoding.com</a></li>
+        <li><a href="http://www.pandastream.com/" target="_blank">PandaStream</a></li>
+      </ul>
+      </section>
+
+
+    <section> 
+     <h2>The Future!</h2>
+      <ul>
+      <li>Webcam input (<a href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html" target="_blank">getUserMedia</a>)
+      <li>Streaming (Peer Connections, <a href="http://www.html5rocks.com/en/tutorials/websockets/basics/" target="_blank">WebSockets</a>)
+      <li>Audio API (<a href="https://wiki.mozilla.org/Audio_Data_API#Third_Party_Discussions" target="_blank">Mozilla</a>'s or <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html" target="_blank">Google</a>'s) </p>
+       <li><a href="http://www.chromeexperiments.com/" target="_blank">Chrome Experiments</a>
+      </ul>
+     </section>
+
+  </div><!--.slides-->
+  <footer>
+    <div class="copyright">
+      HTML5 Multimedia -- Adapted from GDISF --
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+    </div>
+  </footer>
+</div><!--.reveal-->
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+ </body>
+</html>
