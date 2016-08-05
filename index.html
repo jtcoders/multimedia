@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Multimedia in HTML5</title>
-        
+
         <link rel="stylesheet" href="css/reveal.css">
     		<link rel="stylesheet" href="css/theme/gdilight.css" id="theme">
 
@@ -21,25 +21,25 @@
         </script>
     </head>
 <body>
-  
+
   <div class="reveal">
 
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
 
 
-    <section> 
+    <section>
      <h2>Multimedia in HTML5</h2>
      <br>
        <p>
          Slides: <a href="https://jtcoders.github.io/multimedia">https://jtcoders.github.io/multimedia</a>
        </p>
-    </section> 
-      
+    </section>
+
     <section>
       <h2>Prehistoric HTML</h2>
-        <p>Before HTML5, browsers could 
-          only natively display one type of 
+        <p>Before HTML5, browsers could
+          only natively display one type of
           multimedia.
         </p>
         <br>
@@ -78,9 +78,9 @@
         </p>
     </section>
 
-   <section> 
+   <section>
      <h2>The embed element</h2>
-    
+
 <p>The <code>embed</code> tag should specify <code>src</code> and <code>type</code> attributes.
 </p>
 <pre><code>&lt;embed type="application/x-shockwave-flash"
@@ -89,7 +89,7 @@
 <embed type="application/x-shockwave-flash" src="media/zombie_walk.swf"/>
    </section>
 
-    <section> 
+    <section>
      <h2>The object element</h2>
 <p>The <code>object</code> tag should have one or more <code>param</code> child tags that give info to the browser on what to embed.
 </p>
@@ -102,8 +102,8 @@
   <param name="movie" value="media/zombie_walk.swf"/>
 </object>
    </section>
-        
-    <section> 
+
+    <section>
      <h2>Embed Codes</h2>
      <p>The (old) Youtube embed code includes an <code>object</code> and an <code>embed</code> tag.
 </p>
@@ -118,14 +118,14 @@
 
   &lt;<strong>embed</strong> src="https://www.youtube.com/v/ddm5bbeqHVA"
          type="application/x-shockwave-flash"
-         allowscriptaccess="always" 
+         allowscriptaccess="always"
          allowfullscreen="true" width="480" height="385"/&gt;
 
 &lt;/object&gt;</code></pre>
 
    </section>
-    
-    <section> 
+
+    <section>
      <h2>Embeds: Youtube (Example)</h2>
      <p>The code from the previous slide produces:</p>
 <br>
@@ -134,13 +134,13 @@
   <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"/>
 
   <embed src="https://www.youtube.com/v/ddm5bbeqHVA?fs=1&amp;hl=en_US"
-         type="application/x-shockwave-flash" allowscriptaccess="always" 
+         type="application/x-shockwave-flash" allowscriptaccess="always"
          allowfullscreen="true" width="480" height="385">
   </embed>
 
 </object>
    </section>
-    
+
     <section>
      <h2>The problem with plugins</h2>
         <ul>
@@ -150,16 +150,16 @@
           <li>Didn't work everywhere (Flash on iPads)
         </ul>
     </section>
-    
-    
-    
-    <section> 
+
+
+
+    <section>
     <h2>The dawn of native multimedia</h2>
       <p>In HTML5, you can embed audio or video using native HTML tags <code>audio</code> and <code>video</code>, and if the browser supports the tags, it will give users controls to play the file.
       </p>
     </section>
-    
-    <section> 
+
+    <section>
       <h2>Why is native better?</h2>
       <ul>
           <li><strong>No plugins needed</strong>
@@ -167,10 +167,10 @@
           <li>Native, accessible controls
       </ul>
     </section>
-   
-    <section> 
+
+    <section>
     <h2>The audio element</h2>
-     <p>The <code>audio</code> element is used for embedding an audio player inside a page for a particular audio file. 
+     <p>The <code>audio</code> element is used for embedding an audio player inside a page for a particular audio file.
 </p>
 
 <p>You can use various attributes to customize the player: <code>preload</code>, <code>autoplay</code>, <code>loop</code>, and <code>controls</code>.</p>
@@ -181,8 +181,8 @@
 <audio src="media/argentina.ogg" controls="true" autobuffer="true"></audio>
 <p>See also: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">Audio element reference</a></p>
    </section>
-    
-    <section> 
+
+    <section>
      <h2>The video element</h2>
      <p>The <code>video</code> element embeds a video player for a particular video file.
 </p>
@@ -201,7 +201,7 @@
       <h2>Codecs &amp; Containers</h2>
     </section>
 
-    <section> 
+    <section>
      <h2>Audio codecs</h2>
        <p>An audio track is compressed, stored, and decoded according to a codec. Most audio codecs support two channels of sound, some support more.
       </p>
@@ -213,20 +213,20 @@
        </ul>
       </p>
    </section>
-    
-    <section> 
+
+    <section>
      <h2>Browser support</h2>
       <p>There is no official codec for browsers to support, so they vary:</p>
        <p>
         <img src="media/audio_codec_support.png" style="max-height:45vh;">
        <p>
       <p>
-       <a href="http://en.wikipedia.org/wiki/HTML5_Audio" target="_blank">HTML5 Audio Support</a>
+       <a href="http://www.w3schools.com/html/html5_audio.asp" target="_blank">HTML5 Audio W3</a>
       </p>
      </p>
    </section>
 
-    <section> 
+    <section>
      <h2>Video container formats</h2>
      <p>A video file, like an ".avi" file, is really a container for multiple related files that describe a video, like:
 <ul>
@@ -236,19 +236,19 @@
 </ul>
 </p>
 <p>The most popular video containers are:
-  <ul> 
+  <ul>
    <li><strong>MPEG4</strong>: .mp4, .m4v
    <li><strong>Ogg</strong>: .ogv
    <li><strong>WebM</strong>: .webm
  </ul>
      </section>
 
-    <section> 
+    <section>
      <h2>Video codecs</h2>
      <p>A video track is compressed and stored in a particular way, and a "codec" describes how to turn the stored data into the series of images that you see.
 </p>
 <p>The most relevant video codecs are:
-  <ul> 
+  <ul>
    <li><strong>H.264</strong>: <span style="color:red">Patent-encumbered</span>.
    <li><strong>Theora</strong>: Royalty-free.
    <li><strong>VP8</strong>: Patented but licensed royalty-free.
@@ -256,8 +256,8 @@
 </p>
 
      </section>
-  
-    <section> 
+
+    <section>
      <h2>Browser support</h2>
      <p>Each  browser supports a different combo of formats and codecs, due to patents issues. This is the current situation:</p>
       <img src="media/video_codec_support.png" style="max-height:50vh;">
@@ -265,16 +265,15 @@
       </p>
       <!--The Theora/Ogg and WebM formats are both open-source and patent-free, so they are the best to use if you don't want to worry about licensing.
       -->
-     </section>    
-    
-    <section> 
+     </section>
+
+    <section>
      <h2>Multimedia Encoders</h2>
      <p>There are now many online services, desktop apps,
       and command-line libraries for encoding, like:
      </p>
 
      <ul>
-      <li><a href="http://mirovideoconverter.com" target="_blank">Miro Video Converter</a> (app)
       <li><a href="http://www.onlinevideoconverter.com" target="_blank">Online Video Converter</a>(online)
       <li><a href="http://firefogg.org/" target="_blank">FireFogg</a> (Firefox plugin)
       <li><a href="http://handbrake.fr/" target="_blank">HandBrake</a> (open-source, cross-platform)
@@ -282,7 +281,7 @@
      </ul>
      </section>
 
-    <section> 
+    <section>
      <h2>Multiple media sources</h2>
      <p>As we saw, different browsers support different formats. Thankfully, HTML5 lets us specify multiple sources for the <code>video</code> and <code>audio</code> elements, so browsers can use whichever works for them.
 </p>
@@ -297,16 +296,16 @@
   <source src="media/chrome_japan.ogv" type="video/ogg">
 </video>
      </section>
-  
-    <section> 
+
+    <section>
      <h2>Fallback options</h2>
      <p>There are some browsers that don't support these new elements. In that case, you can provide a fallback option via a browser plug-in, like Java or Flash, and put the fallback inside the element. For example, here's a Flash fallback:
 </p>
 
-<pre><code>&lt;video src="video.ogv" controls&gt;  
-    &lt;object data="flvplayer.swf" type="application/x-shockwave-flash"&gt;  
-      &lt;param value="flvplayer.swf" name="movie"/&gt;  
-    &lt;/object&gt;  
+<pre><code>&lt;video src="video.ogv" controls&gt;
+    &lt;object data="flvplayer.swf" type="application/x-shockwave-flash"&gt;
+      &lt;param value="flvplayer.swf" name="movie"/&gt;
+    &lt;/object&gt;
 &lt;/video&gt;</code></pre>
      </section>
 
@@ -318,7 +317,7 @@
       <h2>Accessibility</h2>
     </section>
 
-    <section> 
+    <section>
      <h2>Tracks</h2>
 
 <p>The <code>track</code> tag can be used to specify subtitles, captions, chapters,
@@ -340,7 +339,7 @@
     <!-- http://dl.dropbox.com/u/10998095/Screenshots/fn~y33syqgw~.png -->
      </section>
 
-    <section> 
+    <section>
      <h2>Track files</h2>
 
       <p>The WebVTT or SRT file format describes timed information.</p>
@@ -357,7 +356,7 @@ And thus it &lt;b&gt;begins&lt;/b&gt;... </code></pre>
 
 
     <!-- tools for making subtitles? Amara? -->
-    <section> 
+    <section>
      <h2>Captioning/Translation Tools</h2>
 
       <ul>
@@ -370,13 +369,13 @@ And thus it &lt;b&gt;begins&lt;/b&gt;... </code></pre>
       </ul>
 
      </section>
-    
+
     <!-- JS APIs -->
     <section>
       <h2>JavaScript APIs</h2>
     </section>
 
-    <section> 
+    <section>
      <h2>API Attributes</h2>
 
       <p>Many of these attributes can be set via JS, and trigger events on change:
@@ -409,7 +408,7 @@ video.playbackRate = video.playbackRate * 2;</code></pre>
       </p>
      </section>
 
-    <section> 
+    <section>
      <h2>API Events</h2>
 
       <ul style="column-count:3;-webkit-column-count:3;-moz-column-count:3;overflow:hidden;">
@@ -447,7 +446,7 @@ video.addEventListener('timechange', function() {
       <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-definitions" target="_blank">W3C Video Events Spec</a>
       </section>
 
-    <section> 
+    <section>
      <h2>API Functions</h2>
 
       <ul style="column-count:3; overflow:hidden;">
@@ -468,7 +467,7 @@ function playVideo() {
 
       </section>
 
-    <section> 
+    <section>
      <h2>API Example</h2>
       <p><a href="http://www.w3.org/2010/05/video/mediaevents.html" target="_blank">This example does everything!</a></p>
 
@@ -478,7 +477,7 @@ function playVideo() {
       <h2><a href="exercise_apis.html" target="_blank">Exercise Time!</a></h2>
     </section>
 
-    <section> 
+    <section>
      <h2>JavaScript Libraries</h2>
 
       <ul>
@@ -492,7 +491,7 @@ function playVideo() {
       </ul>
       </section>
 
-    <section> 
+    <section>
      <h2>Hosted Conversion and Transcoding Services</h2>
 
       <ul>
@@ -505,7 +504,7 @@ function playVideo() {
       </section>
 
 
-    <section> 
+    <section>
      <h2>The Future!</h2>
       <ul>
       <li>Webcam input (<a href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html" target="_blank">getUserMedia</a>)
